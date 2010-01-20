@@ -1,0 +1,14 @@
+<div class="pager" align="center">
+    <em>Results {startRange} to {endRange}</em><br>
+    {if:!isEqual(prevPage,#0#)}
+    <a href="{makeUrl(##,#link#,#pod#)}page/{prevPage}">&lt;&lt; Prev Page</a>
+    {else:}
+    &lt;&lt; Prev Page
+    {end:}
+     |
+     {if:lastPage}
+        Next Page &gt;&gt;
+    {else:}
+        <a href="{makeUrl(##,#link#,#pod#)}page/{nextPage}">Next Page &gt;&gt;</a>
+    {end:}
+</div>

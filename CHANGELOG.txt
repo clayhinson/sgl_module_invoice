@@ -1,0 +1,30 @@
++-----------------------+
+| VERSION: 1.1          |
++-----------------------+
+
+IMPROVEMENTS
+ImportBatch.php - refactored ImportBatch to use set/get methods rather than directly setting variables, and for performance
+ImportMgr.php and LinkMgr.php - refactored to use the new methods in ImportBatch
+InvoiceMgr.php - Added ability to search for invoices by invoice number & vendor # in InvoiceMgr
+Output.php - removed cruft (everything)
+
+General code cleanup
+Added SVN keywords to PHP files
+Modified code / comments layout to fit into phpDocumentor style
+Email notification email clarifications
+CSS modifications to improve layout
+changed SGL function calls to new SGL variable declarations (SGL_Request, SGL_Registry, SGL_Output)
+
+BUGFIXES
+InvoiceXMLParsingStrategy.php - rewrote algorithm to look for specific characters in the barcode strings to avoid incorrect parsing
+LinkMgr.php - linking is now working properly, and updates the media description on link
+
+ADDITIONS
+Changelog, Readme, Version, Upgrade text files
+phpDocCli.sh - php documentor script
+/templates/noticeEmailLink.html - email when documents are linked
+
++-----------------------+
+| VERSION: 1.0          |
++-----------------------+
+Initial Release

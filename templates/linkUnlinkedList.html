@@ -1,0 +1,43 @@
+<h1 class="pageTitle">Total: {totalDocs}</h1>
+<div class="message infoMessage" flexy:if="msgGet()">{msgGet()}</div>
+<div class="message errorMessage" flexy:if="error[empty]">{error[empty]}</div>
+{if:pager}
+<flexy:include src="invoicePager.html">
+{end:}
+
+{foreach:result,oContent}
+<form action="{makeUrl(#update#,#link#,#invoice#)}" method="post" name="noprodform" onclick="toggleHighlight('{oContent.id}'" flexy:ignore>
+    <div id="{oContent.id}-disp">
+    <input type="hidden" name="submitted" value="1">
+    <input type="hidden" name="pageID" value="{pageId}">
+
+    <fieldset class="fsNormal">
+    <legend>Document: {oContent.name} - processed {formatDatePretty(oContent.dateCreated)}</legend>
+    <br />
+    <dl class="onSide">
+        <dt>{foreach:oContent.aAttribs,oAttribs}
+                {if:isEqual(oAttribs.name,#pdf#)}
+                <a href="{makeUrl(#view#,#invoice#,#invoice#)}frmDocumentId/{oAttribs.value}">
+                        <img src="{webRoot}/images/icons/PDF.png" width="24" height="24" align="middle"></a>
+                <a href="{makeUrl(#view#,#invoice#,#invoice#)}frmDocumentId/{oAttribs.value}">View PDF</a>
+                {end:}
+                {end:}</dt>
+            <dd><label for="frmInvoiceId">Invoice # </label><input type="text" width="10" name="frmDocuments[{oContent.id}][invoiceId]" value="">
+
+        <label for="frmInvoiceId">Vendor # </label>
+        <input type="text" width="10" name="frmDocuments[{oContent.id}][vendorId]" value="" /> <input type="submit" class="button action save" value="Link &gt;&gt;"></dd>
+        <div class="alignRight small"><br /><br />Document not needed?
+        <a href="{makeUrl(#delete#,#link#,#invoice#)}frmDocumentId/{oContent.id}"><img src="{webRoot}/images/icons/coquette/24x24/delete_page.png" width=24 height=24 align="middle"></a>
+            <a href="{makeUrl(#delete#,#link#,#invoice#)}frmDocumentId/{oContent.id}">Delete Document</a>
+        </div>
+    </fieldset>
+
+    </div>
+</form>
+<br /><br />
+{end:}
+
+</ul>
+{if:pager}
+<flexy:include src="invoicePager.html">
+{end:}

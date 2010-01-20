@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xdoc>
+    <invoices>
+        <invoice>
+            <invno>1791J</invno>
+            <vendno>CIR02</vendno>
+            <company>CIRES, INC</company>
+            <paidamt>0</paidamt>
+            <faxno>937/323-4835</faxno>
+            <email>robing@ciresinc.com</email>
+            <puramt>781.55</puramt>
+            <comment/>
+            <enteredby>SMOSHITA</enteredby>
+        </invoice>
+    </invoices>
+</xdoc>

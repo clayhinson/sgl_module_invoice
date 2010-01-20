@@ -1,0 +1,122 @@
+#gdtouter {
+	width: 762px;
+	margin-left: auto;
+	margin-right: auto;
+    position: relative;
+	min-height: 100%;
+        border: 1px solid #652C90;
+        background: white;
+        -moz-background-clip:border;
+        -moz-background-inline-policy:continuous;
+        -moz-background-origin:padding;
+}
+
+* html #gdtouter {
+	height: 100%;
+}
+#gdtlogo {
+	width: 225px;
+	height: 135px;
+	float: left;
+}
+
+#gdtinner {
+	width: 760px;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gdtsidebar {
+	display: none;
+
+}
+
+#gdtcontent {
+	margin: 0 0 0 0px;
+	padding: 0;
+	background: white;
+}
+
+
+#invoiceSearchForm {
+    width: 95%;
+    margin: auto;
+}
+#invoiceForm {
+float:left;
+margin-right: 20px;
+
+}
+#vendorForm {
+    width: 400px;
+}
+#invoiceList {
+    margin-left: 50px;
+    width: 100%;
+}
+#gdtheader {
+    height: 100px;
+    margin-bottom: 30px;
+}
+#gdtheader h2 {
+    color:#FFFFFF;
+    font-size:medium;
+    letter-spacing:1.5px;
+    margin:0;
+    padding:40px 0 0;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+dl.onSide dt {
+    float:left;
+    font-size:small;
+    padding-right:20px;
+    text-align:right;
+    width:120px;
+
+}
+dl.onSide dd {
+    margin-bottom:10px;
+    margin-left:150px;
+    padding-bottom:10px;
+
+    font-size:small;
+}
+dl.onTop dd {
+    margin:0;
+}
+.small {
+    font-size: small;
+}
+.required {
+    font-size: small;
+    color: red;
+}
+
+
+.alignRight {
+    text-align: right;
+}
+.alignCenter {
+    text-align: center;
+}
+.fsSmall {
+    border: 1px solid #666;
+    background: transparent;
+    width: 200px;
+    margin-top: 10px;
+}
+.halfWidth {
+    width: 50%;
+    text-align: center;
+}
+
+
+.message {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}

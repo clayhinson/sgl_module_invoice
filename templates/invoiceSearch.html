@@ -1,0 +1,34 @@
+<div class="message infoMessage" flexy:if="msgGet()">{msgGet()}</div>
+
+ <form method="post" action="{makeUrl(#search#,#invoice#,#invoice#)}" name="invoiceSearchForm" flexy:ignore />
+ <input type="hidden" name="submitted" value="1">
+
+    <div id="invoiceForm">
+   <fieldset class="fsNormal">
+    <legend>Search By Invoice #</legend>
+    <p class="message errorMessage" flexy:if="error[invoice]">{error[invoice]}</p>
+    <dl class="onSide">
+
+        <dt><label for="frmInvoiceId">Invoice #</label></dt>
+            <dd>
+
+                <input type="text" width="10" name="frmInvoiceId" value="{invoiceId}">
+        <dt>&nbsp;</dt>
+        <dd><input type="submit" class="button action save"  name="searchinvoice" value="Search" onclick="invoiceSearchform.submit()"></dd>
+    </dl>
+   </fieldset>
+    </div>
+<div id="vendorForm">
+    <fieldset class="fsNormal">
+    <legend>Search By Vendor #</legend>
+    <p class="message errorMessage" flexy:if="error[vendor]">{error[vendor]}</p>
+    <dl class="onSide">
+        <dt><label for="frmVendorId">Vendor #</label></dt>
+            <dd>
+                <input type="text" width="10" name="frmVendorId" value="{vendorId}"></dd>
+        <dt>&nbsp;</dt>
+        <dd><input type="submit" class="button action save"  name="searchvendor" value="Search" onclick="invoiceSearchform.submit()"></dd>
+    </dl>
+    </fieldset>
+</div>
+ </form>

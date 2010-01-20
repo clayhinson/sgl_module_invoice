@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCUMENT doc_no="1" output="C:\Shares\POD Processing\Exports\invoice-RFX000125431_1.pdf" first_page="1" last_page="1" >
+    <PAGE resolution="300" height="3414" width="2615">
+        <BARCODE>
+            <POSITION> left="1802" top="1028" right="2189" bottom="1102" </POSITION>
+            <STRING>CIR02</STRING>
+            <TYPE>0</TYPE>
+            <ORIENTATION>2</ORIENTATION>
+        </BARCODE>
+        <BARCODE>
+            <POSITION> left="1796" top="891" right="2191" bottom="982" </POSITION>
+            <STRING>1791J</STRING>
+            <TYPE>0</TYPE>
+            <ORIENTATION>2</ORIENTATION>
+        </BARCODE>
+        <NB_WDW_TEXT>0</NB_WDW_TEXT>
+        <NB_WDW_GRAPHIC>0</NB_WDW_GRAPHIC>
+    </PAGE>
+<ZONE number="0" type="TEXT" string="﻿To: 5844464
+
+
+
+Sep.30. 2009 5:06PM
+
+
+
+">
+</ZONE>
+<ZONE number="1" type="TEXT" string="﻿From: 216581 7111
+
+
+
+">
+</ZONE>
+<ZONE number="2" type="TEXT" string="﻿9/30/20095:12:22 PM (Page 1 of 1)
+
+
+
+No, 2549 p, 1
+
+
+
+">
+</ZONE>
+<ZONE number="3" type="TEXT" string="﻿G a rl c k
+
+
+
+">
+</ZONE>
+<ZONE number="4" type="TEXT" string="﻿DCA Collection Software
+
+
+
+">
+</ZONE>
+<ZONE number="5" type="TEXT" string="﻿DCA Software
+
+
+
+&quot; Used for the automation of meter collection. Network requirements
+
+
+
+• TCPflP configured
+
+
+
+• 443 (HTTPS) Recommended, Port 80 (HTTP), or port 21 (FTP) must be open for
+
+
+
+automatic transmission of collected data.
+
+
+
+System requirements .
+
+
+
+•. Hardware: Desktop computer system (not a laptop or tablet) • Operating System: Windows 2000IXP
+
+
+
+•. Network Card: 1 OOmbit or higher
+
+
+
+•. RAM: 256MB or higher
+
+
+
+• Microsoft® ,NET Framework 2.0 installed
+
+
+
+• Internet connected browser with a minimum of 1 OOMbit NIC •. Keep system powered on 24 hours a day, 7 days a week
+
+
+
+• All the IP ranges (subnsts) within the company's WAN the DCA should be scanning •. if all users are not in the same location, how many additional locations?
+
+
+
+">
+</ZONE>
+<ZONE number="6" type="TEXT" string="﻿I \I~~ I1I1I Ill11 Ill11 1~llll\\ lill
+
+
+
+179 1 J
+
+
+
+\ 1111111111\\ '11111 ~11~11 IllIIUl
+
+
+
+C I R 0 2
+
+
+
+">
+</ZONE>
+<ZONE number="7" type="TEXT" string="﻿Notes
+
+
+
+• Do not install the DCA on a laptop .. There may be issues of unreliable access when Running software in a wireless enviorment
+
+
+
+• Do not install the DCA on VMWare (virtual machine). .
+
+
+
+~ If you plan to use the DCA to collect data via VPN, please be aware that due to the extended transmission, there is a risk of data loss ..
+
+
+
+•. End User License: MT Business Technologies is an authorized reseller of software owned and developed by PrintFleet Inc. Customer agrees that the end-user license (&quot;EULA&quot;) from PrintFleet Inc. for the Software must be accepted as a &quot;clickwrap&quot; or &quot;shrinkwrap&quot; license by Customer. If Customer does not agree to the EULA, the purchase shall be void .. MT BUSINESS TECHNOLOGIES, INC..&quot; OFFERS NO GUARANTEES, REPRESENTATIONS, OR WARRANTIES OF ANY KIND WHATSOEVER] INCLUDING ANY WARRANTIES OF MERCHANTABILITY OR OF FITNESS FOR A PARTICULAR PURPOSE, EITHER EXPRESS OR IMPLIED, ON SOFTWARE. CUSTOMER AGREES THAT MT BUSINESS TECHNOLOGIES, INC .. SHALL NOT BE LIABLE FOR ANY CONSEQUENTIAL, LOSS OF BUSINESS, LOST PROFITSj OR OTHER DAMAGES, WHETHER IN TORT OR CONTRACT, THAT MAY RESULT
+
+
+
+'&quot; Release: Customer agrees towaive and release any and all claims against MT Business Technologies, Inc. and shall indemnify and hold harmless MT Business Technologies, Inc. for any damage, whether in contract or tort, that Customer may incur from Customers use of the provided software, including any damages to or from products based on, or resulting from, the use thereof.
+
+
+
+• Governing Law: This Agreement is to. be construed in accordance with the laws of the state of Ohio .. Agreed:
+
+
+
+">
+</ZONE>
+<ZONE number="8" type="TEXT" string="﻿Customer
+
+
+
+">
+</ZONE>
+<ZONE number="9" type="TEXT" string="﻿Dealer
+
+
+
+">
+</ZONE>
+<ZONE number="11" type="TEXT" string="﻿AuthorizedSjgnature:~ __ ~ _
+
+
+
+">
+</ZONE>
+<ZONE number="12" type="TEXT" string="﻿Printed Name, Title: _
+
+
+
+">
+</ZONE>
+<ZONE number="13" type="TEXT" string="﻿Printed Name, Title: '. C I·&quot; C.,. ~~ .. , _
+
+
+
+.•... ]
+
+
+
+Date: .«2 u:i Pj
+
+
+
+">
+</ZONE>
+<ZONE number="14" type="TEXT" string="﻿Date: ~_~_
+
+
+
+">
+</ZONE>
+<ZONE number="15" type="TEXT" string="﻿MT Business Technologies Inc.
+
+
+
+">
+</ZONE>
+<ZONE number="16" type="TEXT" string="﻿Confidential
+
+
+
+">
+</ZONE>
+</DOCUMENT>

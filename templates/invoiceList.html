@@ -1,0 +1,53 @@
+<div class="message infoMessage" flexy:if="msgGet()">{msgGet()}</div>
+{if:pager}
+<flexy:include src="invoicePager.html">
+{end:}
+    <div id="invoiceList">
+    <table class="sglTable" width="90%" >
+    <tr class="sglTable">
+    <td ><h4>Invoice#</h4></td>
+    <td ><h4>Vendor#</h4></td>
+    <td ><h4>Vendor</h4></td>
+    <td ><h4>Entered By</h4></td>
+    <td ><h4>Documents</h4></td>
+    </tr>
+    {foreach:result,iKey,oContent}
+    <tr >
+    <td >{oContent.invoiceNum}
+    </td>
+    <td >{oContent.vendorNum}</td>
+    <td >{oContent.vendorName}</td>
+    <td >{oContent.enteredByUserId}</td>
+    <td >
+        <!-- List of documents currently attached to this Invoice -->
+    {foreach:docList,dKey,aDocs}
+
+    {if:isEqual(dKey,iKey)}
+    <div class="docList">
+    {foreach:aDocs,aKey,oDoc}
+    {foreach:oDoc.aAttribs,oAttrib}
+            {if:isEqual(oAttrib.name,#pdf#)}
+            <a href="{makeUrl(#view#,#invoice#,#invoice#)}frmDocumentId/{oAttrib.value}" >
+            <img src="{webRoot}/images/icons/PDF.png" width="16" height="16"></a>
+            <a href="{makeUrl(#view#,#invoice#,#invoice#)}frmDocumentId/{oAttrib.value}" >View Document</a>{end:}
+
+            {end:}
+    </div>
+    {end:}
+    {end:}
+    {end:}
+    <br />
+    </td>
+    </tr>
+    {end:}
+
+    </table>
+    </div>
+{if:result}
+<br><br>
+<h3>Search Again:</h3>
+<flexy:include src="invoiceSearch.html">
+{end:}
+{if:pager}
+<flexy:include src="invoicePager.html">
+{end:}

@@ -1,0 +1,113 @@
+<div class="moduleContainer" id="cmsContainer" flexy:ignore>
+ <form method="post" action="{makeUrl(#update#,#pod#,#pod#)}" id="podManageForm" enctype="multipart/form-data" flexy:ignore />
+        <div class="moduleInfobar right">
+            <div class="wrap">
+                  <h2>{translate(#Overview#)}</h2>
+                <p>
+                {translate(#type#,#ucfirst#)} : {oContent.typeName}<br/>
+                {translate(#created date#,#ucfirst#)} {formatDatePretty(oContent.dateCreated)}<br/>
+                {translate(#updated by#,#ucfirst#)} {oContent.updatedByName}<br/>
+                {translate(#Updated#)} {formatDatePretty(oContent.lastUpdated)}
+                </p>
+
+                <h2>Linked Documents</h2>
+                <p>
+                <!-- List of documents currently attached to this POD -->
+
+                {foreach:docList,oDoc}
+                <div class="docList">
+                {foreach:oDoc.aAttribs,oAttrib}
+                        {if:isEqual(oAttrib.name,#documentType#)}
+                            <p>Type: {oAttrib.value}</p>
+                        {end:}
+                        {if:isEqual(oAttrib.name,#page#)}
+                        <p><a href="{makeUrl(#view#,#file#,#media#)}frmMediaId/{oAttrib.value}" target="_blank">
+                        <img src="{webRoot}/themes/{theme}/images/icons/document_pdf.png"></a>
+                        <a href="{makeUrl(#view#,#file#,#media#)}frmMediaId/{oAttrib.value}" target="_blank">View Document</a> |
+                        <a href="{makeUrl(#unlink#,#link#,#pod#)}frmOrderId/{oContent.name}/frmDocumentId/{oDoc.id}">Unlink</a>
+
+                        {end:}
+                        </p>
+
+                    {end:}
+                </div>
+                {end:}
+
+            </div>
+        </div>
+
+        <div class="moduleContent left">
+            <div class="wrap">
+                <h1>{pageTitle()}</h1>
+                <div class="message" id="ajaxMessage"><!-- Do not remove, MSIE fix --></div>
+                <div class="message infoMessage" flexy:if="msgGet()">{msgGet()}</div>
+                 {if:completed}
+                 <a class="action" href="{makeUrl(#completed#,#pod#,#pod#)}">{translate(#Back#)}</a><br>
+                <h2>
+                     View
+
+                    {else:}
+                <h2>
+                    Edit
+                {end:}
+                    &nbsp;&nbsp;<span>{oContent.name}</span></h2>
+
+                    <fieldset id="viewAttribs">
+                        <h3>Order Info</h3>
+                        <input type="hidden" name="submitted" value="1" />
+                        <input type="hidden" name="content[id]" value="{oContent.id}">
+                        <input type="hidden" name="content[type_id]" value="{oContent.typeId}">
+                        <input type="hidden" name="redir" value="" />
+                        <input type="hidden" name="content[name]" value="{oContent.name}">
+
+
+                        <!--CONTENT ATTRIBUTES-->
+                        <dl  class="onTop cmsBox">
+                            {foreach:oContent.aAttribs,oAttrib}
+                            {this.plugin(#determineViewAttribute#,oAttrib):h}
+                            {end:}
+                        </dl>
+                    </fieldset>
+                    <fieldset id="editAttribs">
+                        <h3>BOL Info</h3>
+                        <dl class="onTop cmsBox">
+                            {if:completed}
+                                {foreach:oContent.aAttribs,oAttrib}
+                                {this.plugin(#displayViewAttribute#,oAttrib):h}
+                                {end:}
+                            {else:}
+                                {foreach:oContent.aAttribs,oAttrib}
+                                {this.plugin(#determineEditAttribute#,oAttrib):h}
+                            {end:}
+
+                            {end:}
+                        </dl>
+                    </fieldset>
+                     {if:!completed}
+                     <fieldset id="save">
+                        <dl class="onTop cmsBox">
+                        <dt>Status</dt>
+                        <dd><select name="content[status]">
+                            <option value="{STATUS_IN_PROGRESS}" selected='selected'>In Progress</option>
+                            <option value="{STATUS_REVIEW}">Accounting Review</option>
+                            <option value="{STATUS_APPROVED}">Completed</option>
+                            </select>
+                        </dd>
+                        </dl>
+
+                        <!--BUTTONS-->
+                         <!--BUTTONS-->
+                        <div class="manager-actions">
+                            <span id="contentEditFormTrigger">
+                                <input type="submit" class="button action save" name="save" value="{translate(#Save#)}" />
+                            {translate(#or#)}
+                            </span>
+                            <a class="action" href="{makeUrl(##,#pod#,#pod#)}">{translate(#Cancel#)}</a>
+                        </div>
+                    </fieldset>
+                     {end:}
+            </div>
+
+        </div>
+    </form>
+</div>

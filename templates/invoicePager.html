@@ -1,0 +1,28 @@
+<div class="pager" align="center">
+<table>
+    <tr>
+       <td align="center"><em>Results {startRange} to {endRange} of {totalDocs}</em>
+    </tr>
+    <tr>
+        <td align="center">
+            {pager.links:h}
+        </td>
+    </tr>
+</table>
+</div>
+<!--
+<div class="pager" align="center">
+    <em>Results {startRange} to {endRange}</em><br>
+    {if:!isEqual(prevPage,#0#)}
+    <a href="{makeUrl(##,#pod#,#pod#)}page/{prevPage}">&lt;&lt; Prev Page</a>
+    {else:}
+    &lt;&lt; Prev Page
+    {end:}
+     |
+    {if:lastPage}
+        Next Page &gt;&gt;
+    {else:}
+    <a href="{makeUrl(##,#pod#,#pod#)}page/{nextPage}">Next Page &gt;&gt;</a>
+    {end:}
+</div>
+-->

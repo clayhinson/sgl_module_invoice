@@ -1,0 +1,37 @@
+
+<div align="left"><h1 style="font-size:18px; font-weight:bold;color: purple;padding:3px; vertical-align:middle;text-decoration: underline;">
+<img src="http://www.garick.com/images/garick_logo3.gif" alt="Garick Logo" width="150" height="89" align="middle">Invoice Matched</h1>
+</div>
+<div>
+    <p>You are receiving this email confirmation because an invoice you scanned was manually matched in the invoice processing system.<br>
+    Please see below for details of the invoices processed.
+    <h2 style="font-size:18px; font-weight:bold;color: white;padding:5px; vertical-align:middle;
+    background-color: purple;">Invoice Detail
+        </h2>
+    <table width="100%" border="0" cellpadding="3" cellspacing="0">
+        <tr style="font-weight:bold;">
+            <td>Invoice #</td>
+            <td>Vendor #</td>
+            <td>Vendor</td>
+            <td>Amount</td>
+            <td>Comment</td>
+            <td>Entered By</td>
+            <td>Batch Page#</td>
+        </tr>
+        <tr><td colspan=7><hr style="color: black;margin-top:-5px;margin-bottom:15px;"></td></tr>
+        <!-- detail loop -->
+        {foreach:invoiceList,key,aInvoice}
+    <tr>
+            <td>{aInvoice[invoiceNum]}</td>
+            <td>{aInvoice[vendorNum]}</td>
+            <td>{aInvoice[vendorName]}</td>
+            <td>${aInvoice[invoiceAmount]}</td>
+            <td>{aInvoice[invoiceComment]}</td>
+            <td>{aInvoice[invoiceUserId]}</td>
+            <td>{aInvoice[batchPageNumber]}</td>
+        </tr>
+        {end:}
+        <!-- end detail loop -->
+
+    </table>
+</div>
