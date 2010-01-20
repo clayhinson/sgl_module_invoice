@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class InvoiceDAO</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> InvoiceDAO</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">class InvoiceDAO  Data access object for the Invoice module.</p>
+<p class="description"><p>Provides database connectivity, and various data processing functions</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Clay Hinson &lt;<a href="mailto:clay.hinson@garick.com">clay.hinson@garick.com</a>&gt;</li>
+				<li><span class="field">version:</span> $Rev: 59 $</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_InvoiceDAO.php.html">/InvoiceDAO.php</a> (line <span class="field">87</span>)
+		</p>
+		
+				
+		<pre>SGL_Manager
+   |
+   --InvoiceDAO</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+											static <span class="method-result">contentId</span>
+										<a href="#createInvoiceContent" title="details" class="method-name">createInvoiceContent</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceContentName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceVendorNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceVendorName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserEmail</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceAmount</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$batchName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+											static <span class="method-result">contentId</span>
+										<a href="#createInvoiceDocContent" title="details" class="method-name">createInvoiceDocContent</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$batchFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceDescription</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceRawXML</span>)
+									</div>
+																																																																																																																																																																																								<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+											static <span class="method-result"><a href="../Invoice/InvoiceDAO.html">InvoiceDAO</a></span>
+										<a href="#singleton" title="details" class="method-name">&amp;singleton</a>
+										()
+									</div>
+																																																												<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">InvoiceDAO</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">true,</span>
+										<a href="#addDocumentLinks" title="details" class="method-name">addDocumentLinks</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sDocumentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$sInvoice</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addDocumentLinksById" title="details" class="method-name">addDocumentLinksById</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$sDocumentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$sInvoice</span>)
+									</div>
+																																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#createMedia" title="details" class="method-name">createMedia</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#deleteMedia" title="details" class="method-name">deleteMedia</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#deleteProcessedPDF" title="details" class="method-name">deleteProcessedPDF</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#deleteProcessedXML" title="details" class="method-name">deleteProcessedXML</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#ensureUploadDirWritable" title="details" class="method-name">ensureUploadDirWritable</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$targetDir</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#filteredSearch" title="details" class="method-name">filteredSearch</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$aParams</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#garickUserLookup" title="details" class="method-name">garickUserLookup</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getDirList" title="details" class="method-name">getDirList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dir</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getDocCount" title="details" class="method-name">getDocCount</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getDocTypes" title="details" class="method-name">getDocTypes</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getFileList" title="details" class="method-name">getFileList</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$dir</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getInvoiceCount" title="details" class="method-name">getInvoiceCount</a>
+										()
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getMediaById" title="details" class="method-name">getMediaById</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getNameAndIDArrayByTypeName" title="details" class="method-name">getNameAndIDArrayByTypeName</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$contentTypeName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getPDFText" title="details" class="method-name">getPDFText</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getSBTInvoice" title="details" class="method-name">getSBTInvoice</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$vendorNum</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#markContentErrored" title="details" class="method-name">markContentErrored</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$contentId</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#markDocumentLinked" title="details" class="method-name">markDocumentLinked</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#parseScannedInvoiceXML" title="details" class="method-name">parseScannedInvoiceXML</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#removeDocumentLink" title="details" class="method-name">removeDocumentLink</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceName</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#searchByName" title="details" class="method-name">searchByName</a>
+											(<span class="var-type">int</span>&nbsp;<span class="var-name">$contentName</span>)
+									</div>
+																								<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#updateDocumentType" title="details" class="method-name">updateDocumentType</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$documentType</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#updateMediaDescription" title="details" class="method-name">updateMediaDescription</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_getDataFromParamString" title="details" class="method-name">_getDataFromParamString</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$paramString</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#_getEndRange" title="details" class="method-name">_getEndRange</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$pager</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$rangeSize</span>)
+									</div>
+																<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">int</span>
+										<a href="#_getStartRange" title="details" class="method-name">_getStartRange</a>
+											(<span class="var-type">object</span>&nbsp;<span class="var-name">$pager</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+													<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateInvoiceContent" id="createInvoiceContent"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static createInvoiceContent</span> (line <span class="line-number">519</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an Invoice content item and returns the contentId</p>
+<p class="description"><p>example usage:  $invoiceId = $this-&gt;da-&gt;createInvoiceContent(args);</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of newly created document</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">contentId</span>
+		<span class="method-name">
+			createInvoiceContent
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceContentName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceVendorNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceVendorName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceUserEmail</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceAmount</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$batchName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceContentName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceNum</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceVendorNum</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceVendorName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceUserId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceUserName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceUserEmail</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceAmount</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$batchName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateInvoiceDocContent" id="createInvoiceDocContent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static createInvoiceDocContent</span> (line <span class="line-number">468</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a Content item and returns the contentId</p>
+<p class="description"><p>example usage:  $docId = $this-&gt;da-&gt;createInvoiceDocContent($filePath, $fileName, $baseFileName, $batchFileName, $invoiceDescription, $invoiceRawXML);  This also creates a media object for use in the file attribute.</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> of newly created document</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">contentId</span>
+		<span class="method-name">
+			createInvoiceDocContent
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$batchFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceDescription</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceRawXML</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fileName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$baseFileName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$batchFileName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceDescription</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceRawXML</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsingleton" id="singleton"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static singleton</span> (line <span class="line-number">115</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a singleton InvoiceDAO instance.</p>
+<p class="description"><p>example usage:  $da = &amp; InvoiceDAO::singleton();  warning: in order to work correctly, the DA  singleton must be instantiated statically and  by reference</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> reference to InvoiceDAO object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Invoice/InvoiceDAO.html">InvoiceDAO</a></span>
+		<span class="method-name">
+			&amp;singleton
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">93</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor - set default resources.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">InvoiceDAO</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodaddDocumentLinks" id="addDocumentLinks"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addDocumentLinks</span> (line <span class="line-number">273</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Function addDocumentLinks</p>
+<p class="description"><p>Appends content links to the existing links for a content item  example usage:  $ok = $this-&gt;da-&gt;addDocumentLinks($documentId, $contentName);</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> or PEAR_ERROR object</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">true,</span>
+		<span class="method-name">
+			addDocumentLinks
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sDocumentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$sInvoice</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sDocumentId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sInvoice</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddDocumentLinksById" id="addDocumentLinksById"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addDocumentLinksById</span> (line <span class="line-number">292</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addDocumentLinksById
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$sDocumentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$sInvoice</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sDocumentId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sInvoice</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateMedia" id="createMedia"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">createMedia</span> (line <span class="line-number">415</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			createMedia
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$baseFileName</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteMedia" id="deleteMedia"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">deleteMedia</span> (line <span class="line-number">571</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteMedia
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mediaId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteProcessedPDF" id="deleteProcessedPDF"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">deleteProcessedPDF</span> (line <span class="line-number">560</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteProcessedPDF
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fileName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddeleteProcessedXML" id="deleteProcessedXML"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">deleteProcessedXML</span> (line <span class="line-number">564</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			deleteProcessedXML
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fileName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodensureUploadDirWritable" id="ensureUploadDirWritable"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">ensureUploadDirWritable</span> (line <span class="line-number">368</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ensureUploadDirWritable
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$targetDir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$targetDir</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfilteredSearch" id="filteredSearch"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">filteredSearch</span> (line <span class="line-number">146</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">a wrapper for SGL_Cms Finder functions, to allow for easy paging &amp; multiple options</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array of content objects</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			filteredSearch
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$aParams</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$aParams</span><span class="var-description">: - array containing contentType,sortBy,sortOrder,limit,offset,filter</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgarickUserLookup" id="garickUserLookup"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">garickUserLookup</span> (line <span class="line-number">588</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			garickUserLookup
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDirList" id="getDirList"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDirList</span> (line <span class="line-number">332</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getDirList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dir</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDocCount" id="getDocCount"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDocCount</span> (line <span class="line-number">224</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getDocCount
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDocTypes" id="getDocTypes"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDocTypes</span> (line <span class="line-number">234</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getDocTypes
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFileList" id="getFileList"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFileList</span> (line <span class="line-number">347</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getFileList
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dir</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dir</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetInvoiceCount" id="getInvoiceCount"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getInvoiceCount</span> (line <span class="line-number">210</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getInvoiceCount
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMediaById" id="getMediaById"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMediaById</span> (line <span class="line-number">576</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getMediaById
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mediaId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetNameAndIDArrayByTypeName" id="getNameAndIDArrayByTypeName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getNameAndIDArrayByTypeName</span> (line <span class="line-number">196</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getNameAndIDArrayByTypeName
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$contentTypeName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$contentTypeName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetPDFText" id="getPDFText"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getPDFText</span> (line <span class="line-number">385</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getPDFText
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$fileName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fileName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetSBTInvoice" id="getSBTInvoice"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getSBTInvoice</span> (line <span class="line-number">594</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getSBTInvoice
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$invoiceNum</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$vendorNum</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceNum</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$vendorNum</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmarkContentErrored" id="markContentErrored"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">markContentErrored</span> (line <span class="line-number">259</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			markContentErrored
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$contentId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$contentId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmarkDocumentLinked" id="markDocumentLinked"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">markDocumentLinked</span> (line <span class="line-number">253</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			markDocumentLinked
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$documentId</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodparseScannedInvoiceXML" id="parseScannedInvoiceXML"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">parseScannedInvoiceXML</span> (line <span class="line-number">601</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			parseScannedInvoiceXML
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filePath</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$baseFileName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filePath</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$baseFileName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveDocumentLink" id="removeDocumentLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">removeDocumentLink</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeDocumentLink
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$invoiceName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$documentId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$invoiceName</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsearchByName" id="searchByName"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">searchByName</span> (line <span class="line-number">133</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">search content by name</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> content ID</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			searchByName
+		</span>
+					(<span class="var-type">int</span>&nbsp;<span class="var-name">$contentName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$contentName</span><span class="var-description">: content name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdateDocumentType" id="updateDocumentType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">updateDocumentType</span> (line <span class="line-number">244</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateDocumentType
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$documentId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$attributeId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$documentType</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$documentId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$attributeId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$documentType</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdateMediaDescription" id="updateMediaDescription"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">updateMediaDescription</span> (line <span class="line-number">450</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateMediaDescription
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$mediaId</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$description</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mediaId</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$description</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getDataFromParamString" id="_getDataFromParamString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_getDataFromParamString</span> (line <span class="line-number">317</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_getDataFromParamString
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$paramString</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$paramString</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getEndRange" id="_getEndRange"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_getEndRange</span> (line <span class="line-number">183</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_getEndRange
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$pager</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$offset</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$limit</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$rangeSize</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$pager</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$offset</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$limit</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rangeSize</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_getStartRange" id="_getStartRange"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">_getStartRange</span> (line <span class="line-number">176</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">pager function - gets start range of pager</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> plus 1 or 0</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">int</span>
+		<span class="method-name">
+			_getStartRange
+		</span>
+					(<span class="var-type">object</span>&nbsp;<span class="var-name">$pager</span>, <span class="var-type">int</span>&nbsp;<span class="var-name">$offset</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">object</span>
+				<span class="var-name">$pager</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$offset</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Wed, 20 Jan 2010 16:34:33 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>
